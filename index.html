@@ -1,0 +1,19 @@
+<head>
+  <title>harvester</title>
+</head>
+
+<body>
+  <input type="file" id="fi" multiple style="display: none" />
+  <button id="ub">Upload File</button>
+</body>
+
+<script>
+  document
+    .querySelector("#fi")
+    .addEventListener("change", (e) =>
+      [...e.target.files].forEach(console.log)
+    );
+  document
+    .querySelector("#ub")
+    .addEventListener("click", () => document.querySelector("#fi").click());
+</script>
